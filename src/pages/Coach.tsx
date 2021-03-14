@@ -42,6 +42,10 @@ const validate = () => {
     return history.replace('/validate')
 }
 
+const getCoach = () => {
+    return history.replace('/voir')
+}
+
 const Home = () =>  {
 
     return (
@@ -125,178 +129,10 @@ const Home = () =>  {
                                     <p className="text-left col-md-12 col-xs-12">Nombre de séance prévu : <span style={{fontWeight: "bold"}}>3</span></p>
                                 </div>
                                 <div className="col-md-12 col-xs-12 d-none d-sm-block d-sm-none d-md-block">
-                                    <Button className="col-md-12 text-center text-right color-speedrun-success">Voir le profil</Button>
+                                    <Button onClick={getCoach} className="col-md-12 text-center text-right color-speedrun-success">Voir le profil</Button>
                                 </div>
                             </Card.Body>
                         </Card>
-                        <Card className="col-md-3 col-xs-12 card-border">
-                            <Card.Body className="card-border card-effet">
-                                <div className="row">
-                                    <Card.Img variant="top" src={img} height={100} className="col-4 text-center img-change"/>
-                                    <div className="col-md-8">
-                                        <p className="text-left col-md-12 col-xs-12">Nom : <span style={{fontWeight: "bold"}}>Sylvestre</span></p>
-                                        <p className="text-left col-md-12 col-xs-12">Prenom : <span style={{fontWeight: "bold"}}>Mike</span></p>
-                                    </div>
-                                </div>
-                                <hr/>
-                                    <p className="text-center col-md-12 col-xs-12">Email : <span style={{fontWeight: "bold"}}>mike.sylvestre@imie-paris.fr </span></p>
-                                <hr/>
-                                <div className="row ">
-                                    <p className="text-left col-md-5 col-xs-12">Diplôme : <span style={{fontWeight: "bold"}}> Oui  </span></p>
-                                    <p className="text-left col-md-12 col-xs-12">Date d'inscritpion : <span style={{fontWeight: "bold"}}> {new Date().getDate()+"/"+(new Date().getMonth()+1)+"/"+new Date().getFullYear()} </span></p>
-                                </div>
-                                <div className="row ">
-                                    <p className="text-left col-md-12 col-xs-12">Nombre de séance prévu : <span style={{fontWeight: "bold"}}>3</span></p>
-                                </div>
-                                <div className="col-md-12 col-xs-12 d-none d-sm-block d-sm-none d-md-block">
-                                    <Button className="col-md-12 text-center text-right color-speedrun-success">Voir le profil</Button>
-                                </div>
-                            </Card.Body>
-                        </Card>
-                        <Card className="col-md-3 col-xs-12 card-border">
-                            <Card.Body className="card-border card-effet">
-                                <div className="row">
-                                    <Card.Img variant="top" src={img} height={100} className="col-4 text-center img-change"/>
-                                    <div className="col-md-8">
-                                        <p className="text-left col-md-12 col-xs-12">Nom : <span style={{fontWeight: "bold"}}>Sylvestre</span></p>
-                                        <p className="text-left col-md-12 col-xs-12">Prenom : <span style={{fontWeight: "bold"}}>Mike</span></p>
-                                    </div>
-                                </div>
-                                <hr/>
-                                    <p className="text-center col-md-12 col-xs-12">Email : <span style={{fontWeight: "bold"}}>mike.sylvestre@imie-paris.fr </span></p>
-                                <hr/>
-                                <div className="row ">
-                                    <p className="text-left col-md-5 col-xs-12">Diplôme : <span style={{fontWeight: "bold"}}> Oui  </span></p>
-                                    <p className="text-left col-md-12 col-xs-12">Date d'inscritpion : <span style={{fontWeight: "bold"}}> {new Date().getDate()+"/"+(new Date().getMonth()+1)+"/"+new Date().getFullYear()} </span></p>
-                                </div>
-                                <div className="row ">
-                                    <p className="text-left col-md-12 col-xs-12">Nombre de séance prévu : <span style={{fontWeight: "bold"}}>3</span></p>
-                                </div>
-                                <div className="col-md-12 col-xs-12 d-none d-sm-block d-sm-none d-md-block">
-                                    <Button className="col-md-12 text-center text-right color-speedrun-success">Voir le profil</Button>
-                                </div>
-                            </Card.Body>
-                        </Card>
-                        <Card className="col-md-3 col-xs-12 card-border">
-                            <Card.Body className="card-border card-effet">
-                                <div className="row">
-                                    <Card.Img variant="top" src={img} height={100} className="col-4 text-center img-change"/>
-                                    <div className="col-md-8">
-                                        <p className="text-left col-md-12 col-xs-12">Nom : <span style={{fontWeight: "bold"}}>Sylvestre</span></p>
-                                        <p className="text-left col-md-12 col-xs-12">Prenom : <span style={{fontWeight: "bold"}}>Mike</span></p>
-                                    </div>
-                                </div>
-                                <hr/>
-                                    <p className="text-center col-md-12 col-xs-12">Email : <span style={{fontWeight: "bold"}}>mike.sylvestre@imie-paris.fr </span></p>
-                                <hr/>
-                                <div className="row ">
-                                    <p className="text-left col-md-5 col-xs-12">Diplôme : <span style={{fontWeight: "bold"}}> Oui  </span></p>
-                                    <p className="text-left col-md-12 col-xs-12">Date d'inscritpion : <span style={{fontWeight: "bold"}}> {new Date().getDate()+"/"+(new Date().getMonth()+1)+"/"+new Date().getFullYear()} </span></p>
-                                </div>
-                                <div className="row ">
-                                    <p className="text-left col-md-12 col-xs-12">Nombre de séance prévu : <span style={{fontWeight: "bold"}}>3</span></p>
-                                </div>
-                                <div className="col-md-12 col-xs-12 d-none d-sm-block d-sm-none d-md-block">
-                                    <Button className="col-md-12 text-center text-right color-speedrun-success">Voir le profil</Button>
-                                </div>
-                            </Card.Body>
-                        </Card>
-                        <Card className="col-md-3 col-xs-12 card-border">
-                            <Card.Body className="card-border card-effet">
-                                <div className="row">
-                                    <Card.Img variant="top" src={img} height={100} className="col-4 text-center img-change"/>
-                                    <div className="col-md-8">
-                                        <p className="text-left col-md-12 col-xs-12">Nom : <span style={{fontWeight: "bold"}}>Sylvestre</span></p>
-                                        <p className="text-left col-md-12 col-xs-12">Prenom : <span style={{fontWeight: "bold"}}>Mike</span></p>
-                                    </div>
-                                </div>
-                                <hr/>
-                                    <p className="text-center col-md-12 col-xs-12">Email : <span style={{fontWeight: "bold"}}>mike.sylvestre@imie-paris.fr </span></p>
-                                <hr/>
-                                <div className="row ">
-                                    <p className="text-left col-md-5 col-xs-12">Diplôme : <span style={{fontWeight: "bold"}}> Oui  </span></p>
-                                    <p className="text-left col-md-12 col-xs-12">Date d'inscritpion : <span style={{fontWeight: "bold"}}> {new Date().getDate()+"/"+(new Date().getMonth()+1)+"/"+new Date().getFullYear()} </span></p>
-                                </div>
-                                <div className="row ">
-                                    <p className="text-left col-md-12 col-xs-12">Nombre de séance prévu : <span style={{fontWeight: "bold"}}>3</span></p>
-                                </div>
-                                <div className="col-md-12 col-xs-12 d-none d-sm-block d-sm-none d-md-block">
-                                    <Button className="col-md-12 text-center text-right color-speedrun-success">Voir le profil</Button>
-                                </div>
-                            </Card.Body>
-                        </Card>
-                        <Card className="col-md-3 col-xs-12 card-border">
-                            <Card.Body className="card-border card-effet">
-                                <div className="row">
-                                    <Card.Img variant="top" src={img} height={100} className="col-4 text-center img-change"/>
-                                    <div className="col-md-8">
-                                        <p className="text-left col-md-12 col-xs-12">Nom : <span style={{fontWeight: "bold"}}>Sylvestre</span></p>
-                                        <p className="text-left col-md-12 col-xs-12">Prenom : <span style={{fontWeight: "bold"}}>Mike</span></p>
-                                    </div>
-                                </div>
-                                <hr/>
-                                    <p className="text-center col-md-12 col-xs-12">Email : <span style={{fontWeight: "bold"}}>mike.sylvestre@imie-paris.fr </span></p>
-                                <hr/>
-                                <div className="row ">
-                                    <p className="text-left col-md-5 col-xs-12">Diplôme : <span style={{fontWeight: "bold"}}> Oui  </span></p>
-                                    <p className="text-left col-md-12 col-xs-12">Date d'inscritpion : <span style={{fontWeight: "bold"}}> {new Date().getDate()+"/"+(new Date().getMonth()+1)+"/"+new Date().getFullYear()} </span></p>
-                                </div>
-                                <div className="row ">
-                                    <p className="text-left col-md-12 col-xs-12">Nombre de séance prévu : <span style={{fontWeight: "bold"}}>3</span></p>
-                                </div>
-                                <div className="col-md-12 col-xs-12 d-none d-sm-block d-sm-none d-md-block">
-                                    <Button className="col-md-12 text-center text-right color-speedrun-success">Voir le profil</Button>
-                                </div>
-                            </Card.Body>
-                        </Card>
-                        <Card className="col-md-3 col-xs-12 card-border">
-                            <Card.Body className="card-border card-effet">
-                                <div className="row">
-                                    <Card.Img variant="top" src={img} height={100} className="col-4 text-center img-change"/>
-                                    <div className="col-md-8">
-                                        <p className="text-left col-md-12 col-xs-12">Nom : <span style={{fontWeight: "bold"}}>Sylvestre</span></p>
-                                        <p className="text-left col-md-12 col-xs-12">Prenom : <span style={{fontWeight: "bold"}}>Mike</span></p>
-                                    </div>
-                                </div>
-                                <hr/>
-                                    <p className="text-center col-md-12 col-xs-12">Email : <span style={{fontWeight: "bold"}}>mike.sylvestre@imie-paris.fr </span></p>
-                                <hr/>
-                                <div className="row ">
-                                    <p className="text-left col-md-5 col-xs-12">Diplôme : <span style={{fontWeight: "bold"}}> Oui  </span></p>
-                                    <p className="text-left col-md-12 col-xs-12">Date d'inscritpion : <span style={{fontWeight: "bold"}}> {new Date().getDate()+"/"+(new Date().getMonth()+1)+"/"+new Date().getFullYear()} </span></p>
-                                </div>
-                                <div className="row ">
-                                    <p className="text-left col-md-12 col-xs-12">Nombre de séance prévu : <span style={{fontWeight: "bold"}}>3</span></p>
-                                </div>
-                                <div className="col-md-12 col-xs-12 d-none d-sm-block d-sm-none d-md-block">
-                                    <Button className="col-md-12 text-center text-right color-speedrun-success">Voir le profil</Button>
-                                </div>
-                            </Card.Body>
-                        </Card>
-                        <Card className="col-md-3 col-xs-12 card-border">
-                            <Card.Body className="card-border card-effet">
-                                <div className="row">
-                                    <Card.Img variant="top" src={img} height={100} className="col-4 text-center img-change"/>
-                                    <div className="col-md-8">
-                                        <p className="text-left col-md-12 col-xs-12">Nom : <span style={{fontWeight: "bold"}}>Sylvestre</span></p>
-                                        <p className="text-left col-md-12 col-xs-12">Prenom : <span style={{fontWeight: "bold"}}>Mike</span></p>
-                                    </div>
-                                </div>
-                                <hr/>
-                                    <p className="text-center col-md-12 col-xs-12">Email : <span style={{fontWeight: "bold"}}>mike.sylvestre@imie-paris.fr </span></p>
-                                <hr/>
-                                <div className="row ">
-                                    <p className="text-left col-md-5 col-xs-12">Diplôme : <span style={{fontWeight: "bold"}}> Oui  </span></p>
-                                    <p className="text-left col-md-12 col-xs-12">Date d'inscritpion : <span style={{fontWeight: "bold"}}> {new Date().getDate()+"/"+(new Date().getMonth()+1)+"/"+new Date().getFullYear()} </span></p>
-                                </div>
-                                <div className="row ">
-                                    <p className="text-left col-md-12 col-xs-12">Nombre de séance prévu : <span style={{fontWeight: "bold"}}>3</span></p>
-                                </div>
-                                <div className="col-md-12 col-xs-12 d-none d-sm-block d-sm-none d-md-block">
-                                    <Button className="col-md-12 text-center text-right color-speedrun-success">Voir le profil</Button>
-                                </div>
-                            </Card.Body>
-                        </Card> 
                     </div>
                 </div>
                     <div className="row">

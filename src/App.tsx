@@ -15,7 +15,9 @@ import Profil from './pages/Profil'
 import User from './pages/User'
 import GetCoach from './pages/GetCoach'
 import Validate from './pages/Validate'
+import Administrateur from './pages/Admin'
 import history from './history';
+import Api from './pages/Api';
 
 
 function App() {
@@ -30,11 +32,13 @@ function App() {
             <Route exact path='/avancer' component={Avancer} />
             <Route exact path='/utilisateur' component={Utilisateur} />
             <Route exact path='/coach' component={Coach} />
-            <Route exact path='/admin' component={Admin} />
+            <Route exact path='/administrateur' component={Administrateur} />
             <Route exact path='/profil' component={Profil} />
             <Route exact path='/user' component={User} />
             <Route exact path='/voir' component={GetCoach} />
             <Route exact path='/validate' component={Validate} />
+            <Route exact path='/admin' component={Admin} />
+            <Route exact path='/api' component={Api} />
             {/* <Route exact path='/reinitialiser-mot-de-passe/:str' component={Reinitialiser.Display} /> */}
             {/* ROUTES NECESSITANT D'ETRE CONNECTE
             <ProtectedRoute exact path='/tableau-de-bord' component={Dashboard.Display} />
