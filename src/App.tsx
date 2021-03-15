@@ -17,6 +17,7 @@ import GetCoach from './pages/GetCoach'
 import Validate from './pages/Validate'
 import Administrateur from './pages/Admin'
 import history from './history';
+import Password from './pages/Password';
 import Api from './pages/Api';
 
 
@@ -39,6 +40,7 @@ function App() {
             <Route exact path='/validate' component={Validate} />
             <Route exact path='/admin' component={Admin} />
             <Route exact path='/api' component={Api} />
+            <Route exact path='/password' component={Password} />
             {/* <Route exact path='/reinitialiser-mot-de-passe/:str' component={Reinitialiser.Display} /> */}
             {/* ROUTES NECESSITANT D'ETRE CONNECTE
             <ProtectedRoute exact path='/tableau-de-bord' component={Dashboard.Display} />

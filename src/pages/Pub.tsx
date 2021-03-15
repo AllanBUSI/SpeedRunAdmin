@@ -55,7 +55,7 @@ const Home = () =>  {
 
     return (
         <>
-         <Navbar className="nav-postition" collapseOnSelect expand="lg" variant="dark">
+        <Navbar className="nav-postition" collapseOnSelect expand="lg" variant="dark">
             <Navbar.Brand href="#home" style={{color: "#F8AE6B"}} onClick={home}>SpeedRun</Navbar.Brand>
             <Navbar.Toggle aria-controls="responsive-navbar-nav"/>
             <Navbar.Collapse id="responsive-navbar-nav">
@@ -119,9 +119,8 @@ const Home = () =>  {
                     <Card className="col-md-12 card-border">
                         <Card.Body className="card-border">
                             <div className="row">
-                                <Button className="col-md-3 option text-center text-center  color-speedrun-success">Imprimer les factures de la sections</Button>
-                                <Button className="col-md-4 offset-md-1 option text-center text-right  color-speedrun-success">Imprimer vos factures</Button>
-                                <Button className="col-md-3 offset-md-1 option text-center text-right  color-speedrun-success">Imprimer toutes les factures</Button>
+                                <Button className="col-md-12 option text-center text-center  color-speedrun-success">Imprimer les factures de la sections</Button>
+                                <Button className="col-md-12 option text-center text-right  color-speedrun-success">Imprimer vos factures</Button>
                             </div>
                         </Card.Body>
                     </Card>
@@ -211,7 +210,6 @@ const Home = () =>  {
                             </Card.Body>
                         </Card>
                     </div>
-                   
                 </div>
                     <div className="row">
                         <div className="pagination offset-2 col-md-3">

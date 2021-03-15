@@ -591,6 +591,59 @@ const Home = () =>  {
                                 </tbody>
                             </Table>
                         </div>
+                        <div className="size-card-12 col-xs-12 card-speedrun size-block-principal">
+                            <h2>/facture - Methode POST</h2>
+                            <Table className="color-table-get" striped bordered hover>
+                                <thead>
+                                    <tr>
+                                        <th className="text-left">Headers</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Authorization : bearer - string</td>
+                                    </tr>
+                                </tbody>
+                            </Table>
+                            <Table className="color-table-get" striped bordered hover>
+                                <thead>
+                                    <tr>
+                                        <th className="text-left">Body</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Mode : (all, utilisateur, pages, id)</td>
+                                    </tr>
+                                </tbody>
+                            </Table>
+                            <Table className="color-table-get" striped bordered hover>
+                                <thead>
+                                    <tr>
+                                        <th className="text-left">#</th>
+                                        <th className="text-left">Status</th>
+                                        <th className="text-left">Message</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>200</td>
+                                        <td>error : false, message: "Facture envoyés par email"</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2</td>
+                                        <td>400</td>
+                                        <td>error : true, message: "Aucune facture n'a été envoyer"</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2</td>
+                                        <td>400</td>
+                                        <td>error : true, message: "vous avez selectionner trop de facture (limite 5)"</td>
+                                    </tr>
+                                </tbody>
+                            </Table>
+                        </div>
                     </div>
                 </div>
             </div>
