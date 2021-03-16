@@ -11,11 +11,11 @@ export default class Login extends React.Component<P,S> {
     public static Display = Login as React.ComponentType<P>;
 
     home = () => {
-        return history.replace('/home')
+        return history.push('/home')
     }
 
     password = () => {
-        return history.replace('/password')
+        return history.push('/password')
     }
 
     render()
@@ -39,7 +39,7 @@ export default class Login extends React.Component<P,S> {
                                         Submit
                                     </Button>
                             </Form>
-                            <a onClick={this.password}> Mot de passe oublié</a>
+                            <p onClick={this.password}> Mot de passe oublié</p>
                         </Col>
                     </Row>
                 </Container>

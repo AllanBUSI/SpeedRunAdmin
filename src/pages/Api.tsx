@@ -1,47 +1,39 @@
-import React, { useState } from 'react';
-import  { BrowserRouter,Link} from 'react-router-dom'
-import {Navbar, Nav,NavDropdown, Form, FormControl, Button, Card, Alert, Table } from 'react-bootstrap';
+import React from 'react';
+import {Navbar, Nav,NavDropdown, Form, FormControl, Button, Table } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { Pie, Bar, HorizontalBar,Line,Polar, } from 'react-chartjs-2';
 import history from '../history'
-import img from '.../../../public/profil.jpg'
 
 const publicite = () => {
-    return history.replace('/pub')
+    return history.push('/pub')
 }
 
 const home = () => {
-    return history.replace('/home')
+    return history.push('/home')
 }
 
 const user = () => {
-    return history.replace('/utilisateur')
+    return history.push('/utilisateur')
 }
 
 const coach = () => {
-    return history.replace('/coach')
+    return history.push('/coach')
 }
 
 const admin = () => {
-    return history.replace('/admin')
+    return history.push('/admin')
 }
 
 const profil = () => {
-    return history.replace('/profil')
+    return history.push('/profil')
 }
 
 const login = () => {
-    return history.replace('/')
+    return history.push('/')
 }
 
 const api = () => {
-    return history.replace('/api')
+    return history.push('/api')
 }
-
-const getAdmin = () => {
-    return history.replace('/admin')
-}
-
 
 const Home = () =>  {
 

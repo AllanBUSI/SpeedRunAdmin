@@ -1,53 +1,46 @@
 import React, { useState, useEffect } from 'react';
-import  { BrowserRouter,Link} from 'react-router-dom'
-import {Navbar, Nav,NavDropdown, Form, FormControl, Button, Card, Image, Modal } from 'react-bootstrap';
+import {Navbar, Nav,NavDropdown, Form, FormControl, Button, Card } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { Pie, Bar, HorizontalBar,Line,Polar, } from 'react-chartjs-2';
+import { HorizontalBar } from 'react-chartjs-2';
 import history from '../history'
 import img from '.../../../public/profil.jpg'
 
 
 const publicite = () => {
-    return history.replace('/pub')
+    return history.push('/pub')
 }
 
 const home = () => {
-    return history.replace('/home')
+    return history.push('/home')
 }
 
 const user = () => {
-    return history.replace('/utilisateur')
+    return history.push('/utilisateur')
 }
 
 const coach = () => {
-    return history.replace('/coach')
+    return history.push('/coach')
 }
 
 const admin = () => {
-    return history.replace('/admin')
+    return history.push('/admin')
 }
 
 const profil = () => {
-    return history.replace('/profil')
+    return history.push('/profil')
 }
 
 const login = () => {
-    return history.replace('/')
+    return history.push('/')
 }
 
 const api = () => {
-    return history.replace('/api')
+    return history.push('/api')
 }
 
 const Home = () =>  {
 
-    const [show, setShow] = useState(false);
-
-    const handleClose = () => setShow(false);
-    const handleShow = () => setShow(true);
-
-
-    const [polar, setPolar] = useState({
+    const polar = {
         labels: ['','Création profil', 'Coach créé', 'Publicités lancer',''],
         datasets: [
             {
@@ -60,9 +53,9 @@ const Home = () =>  {
                 data: [0,6,5,3,0]
             }
         ]
-    });
+    };
 
-    const [selectedFile, setSelectedFile] = useState()
+    const selectedFile = useState()
     const [preview, setPreview] = useState()
 
     // create a preview as a side effect, whenever selected file is changed
@@ -79,20 +72,10 @@ const Home = () =>  {
         return () => URL.revokeObjectURL(objectUrl)
     }, [selectedFile])
 
-    const onSelectFile = (e : any) => {
-        if (!e.target.files || e.target.files.length === 0) {
-            setSelectedFile(undefined)
-            return
-        }
-
-        // I've kept this example simple by using the first image instead of multiple
-        setSelectedFile(e.target.files[0])
-    }
-
     return (
         <>
          <Navbar className="nav-postition" collapseOnSelect expand="lg" variant="dark">
-            <Navbar.Brand href="#home" style={{color: "#F8AE6B"}} onClick={home}>SpeedRun</Navbar.Brand>
+            <Navbar.Brand style={{color: "#F8AE6B"}} onClick={home}>SpeedRun</Navbar.Brand>
             <Navbar.Toggle aria-controls="responsive-navbar-nav"/>
             <Navbar.Collapse id="responsive-navbar-nav">
                 <Nav className="mr-auto col-md-8">

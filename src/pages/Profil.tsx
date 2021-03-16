@@ -1,47 +1,46 @@
 import React, { useState, useEffect } from 'react';
-import  { BrowserRouter,Link} from 'react-router-dom'
-import {Navbar, Nav,NavDropdown, Form, FormControl, Button, Card, Image } from 'react-bootstrap';
+import {Navbar, Nav,NavDropdown, Form, FormControl, Button, Card} from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { Pie, Bar, HorizontalBar,Line,Polar, } from 'react-chartjs-2';
+import { HorizontalBar } from 'react-chartjs-2';
 import history from '../history'
 import img from '.../../../public/profil.jpg'
 
 
 const publicite = () => {
-    return history.replace('/pub')
+    return history.push('/pub')
 }
 
 const home = () => {
-    return history.replace('/home')
+    return history.push('/home')
 }
 
 const user = () => {
-    return history.replace('/utilisateur')
+    return history.push('/utilisateur')
 }
 
 const coach = () => {
-    return history.replace('/coach')
+    return history.push('/coach')
 }
 
 const admin = () => {
-    return history.replace('/admin')
+    return history.push('/admin')
 }
 
 const profil = () => {
-    return history.replace('/profil')
+    return history.push('/profil')
 }
 
 const login = () => {
-    return history.replace('/')
+    return history.push('/')
 }
 
 const api = () => {
-    return history.replace('/api')
+    return history.push('/api')
 }
 
 const Home = () =>  {
 
-    const [polar, setPolar] = useState({
+    const polar = {
         labels: ['','Valider Coach', 'Profil modifier', 'Publicités lancer',''],
         datasets: [
             {
@@ -54,19 +53,19 @@ const Home = () =>  {
                 data: [0,6,5,3,0]
             }
         ]
-    });
+    };
 
-    const [selectedFile, setSelectedFile] = useState()
-    const [preview, setPreview] = useState()
+    const [selectedFile, setSelectedFile] = useState("")
+    const [preview, setPreview] = useState("")
 
     // create a preview as a side effect, whenever selected file is changed
     useEffect(() => {
         if (!selectedFile) {
-            setPreview(undefined)
+            setPreview("")
             return
         }
 
-        const objectUrl : any = URL.createObjectURL(selectedFile)
+        const objectUrl  = URL.createObjectURL(selectedFile) as string;
         setPreview(objectUrl)
 
         // free memory when ever this component is unmounted
@@ -75,12 +74,12 @@ const Home = () =>  {
 
     const onSelectFile = (e : any) => {
         if (!e.target.files || e.target.files.length === 0) {
-            setSelectedFile(undefined)
+            setSelectedFile("")
             return
         }
 
         // I've kept this example simple by using the first image instead of multiple
-        setSelectedFile(e.target.files[0])
+        setSelectedFile(e.target.files[0] as string)
     }
 
     return (
@@ -127,7 +126,7 @@ const Home = () =>  {
                 <Card className="col-md-5 col-xs-12 card-border card-speedrun">
                     <Card.Body className="card-border ">
                         <div className="row">
-                            <Card.Img variant="top" src={preview ? preview : img} height={200} className="col-4 text-center img-change"/>
+                            <Card.Img variant="top" src={Boolean(preview) ? preview : img} height={200} className="col-4 text-center img-change"/>
                             <div className="col-md-8">
                                 <p className="text-left col-md-12 col-xs-12">Nom : <input type="text" className="form-control" placeholder="sylvestre"/></p>
                                 <p className="text-left col-md-12 col-xs-12">Prenom : <input type="text" className="form-control" placeholder="mike"/></p>

@@ -1,46 +1,44 @@
-import React, { useState } from 'react';
-import  { BrowserRouter,Link} from 'react-router-dom'
-import {Navbar, Nav,NavDropdown, Form, FormControl, Button, Card, Alert, ListGroup } from 'react-bootstrap';
+import React from 'react';
+import {Navbar, Nav,NavDropdown, Form, FormControl, Button, Card } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { FaRegWindowClose, FaWrench } from "react-icons/fa";
-import { Pie, Bar, HorizontalBar,Line,Polar, } from 'react-chartjs-2';
+import { Bar, HorizontalBar,Line } from 'react-chartjs-2';
 import history from '../history'
 
 const publicite = () => {
-    return history.replace('/pub')
+    return history.push('/pub')
 }
 
 const home = () => {
-    return history.replace('/home')
+    return history.push('/home')
 }
 
 const user = () => {
-    return history.replace('/utilisateur')
+    return history.push('/utilisateur')
 }
 
 const coach = () => {
-    return history.replace('/coach')
+    return history.push('/coach')
 }
 
 const admin = () => {
-    return history.replace('/admin')
+    return history.push('/admin')
 }
 
 const profil = () => {
-    return history.replace('/profil')
+    return history.push('/profil')
 }
 
 const login = () => {
-    return history.replace('/')
+    return history.push('/')
 }
 
 const api = () => {
-    return history.replace('/api')
+    return history.push('/api')
 }
 
 const Home = () =>  {
 
-    const [polar, setPolar] = useState({
+    const polar = {
         labels: ['Jaquie', 'Michel', 'Jack', 'Daniels'],
         datasets: [
             {
@@ -53,9 +51,9 @@ const Home = () =>  {
             data: [6,5,3,1]
             }
         ]
-    });
+    };
 
-    const [dataseter, setDataseter] = useState({
+    const dataseter = {
         labels: ['Janvier', 'Février', 'Mars', 'Avril', 'Mai', 'Juin', 'Juillet', 'Aout', 'Septembre', 'Octobre', 'Novembre', 'Decembre'],
         datasets: [
         {
@@ -78,9 +76,9 @@ const Home = () =>  {
             data: [65, 59, 80, 81, 56, 55, 40, 35, 25, 15, 65, 98, 10]
         }
         ]
-    });
+    };
 
-const [datasets, setDatasets] = useState({
+    const datasets = {
         labels: [
             'NET', 
             'TVA',
@@ -95,7 +93,7 @@ const [datasets, setDatasets] = useState({
             hoverBorderColor: 'rgba(255,99,132,1)',
             data: [100, 20, 80]
         }]
-    })
+    }
 
     return (
         <>
