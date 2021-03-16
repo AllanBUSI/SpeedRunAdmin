@@ -1,61 +1,59 @@
-import React, { useState } from 'react';
-import  { BrowserRouter,Link} from 'react-router-dom'
+import React from 'react';
 import {Navbar, Nav,NavDropdown, Form, FormControl, Button, Card, Pagination } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { Pie, Bar, HorizontalBar,Line,Polar, } from 'react-chartjs-2';
 import history from '../history'
 
 const publicite = () => {
-    return history.replace('/pub')
+    return history.push('/pub')
 }
 
 const home = () => {
-    return history.replace('/home')
+    return history.push('/home')
 }
 
 const user = () => {
-    return history.replace('/utilisateur')
+    return history.push('/utilisateur')
 }
 
 const coach = () => {
-    return history.replace('/coach')
+    return history.push('/coach')
 }
 
 const admin = () => {
-    return history.replace('/admin')
+    return history.push('/admin')
 }
 
 const profil = () => {
-    return history.replace('/profil')
+    return history.push('/profil')
 }
 
 const login = () => {
-    return history.replace('/')
+    return history.push('/')
 }
 
 const api = () => {
-    return history.replace('/api')
+    return history.push('/api')
 }
 
 
 const campagne = () => {
-    return history.replace('/pub')
+    return history.push('/pub')
 }
 
 
 const simple = () => {
-    return history.replace('/simple')
+    return history.push('/simple')
 }
 
 
 const avancer = () => {
-    return history.replace('/avancer')
+    return history.push('/avancer')
 }
 const Home = () =>  {
 
     return (
         <>
-         <Navbar className="nav-postition" collapseOnSelect expand="lg" variant="dark">
+        <Navbar className="nav-postition" collapseOnSelect expand="lg" variant="dark">
             <Navbar.Brand href="#home" style={{color: "#F8AE6B"}} onClick={home}>SpeedRun</Navbar.Brand>
             <Navbar.Toggle aria-controls="responsive-navbar-nav"/>
             <Navbar.Collapse id="responsive-navbar-nav">
@@ -119,9 +117,8 @@ const Home = () =>  {
                     <Card className="col-md-12 card-border">
                         <Card.Body className="card-border">
                             <div className="row">
-                                <Button className="col-md-3 option text-center text-center  color-speedrun-success">Imprimer les factures de la sections</Button>
-                                <Button className="col-md-4 offset-md-1 option text-center text-right  color-speedrun-success">Imprimer vos factures</Button>
-                                <Button className="col-md-3 offset-md-1 option text-center text-right  color-speedrun-success">Imprimer toutes les factures</Button>
+                                <Button className="col-md-12 option text-center text-center  color-speedrun-success">Imprimer les factures de la sections</Button>
+                                <Button className="col-md-12 option text-center text-right  color-speedrun-success">Imprimer vos factures</Button>
                             </div>
                         </Card.Body>
                     </Card>
@@ -211,7 +208,6 @@ const Home = () =>  {
                             </Card.Body>
                         </Card>
                     </div>
-                   
                 </div>
                     <div className="row">
                         <div className="pagination offset-2 col-md-3">

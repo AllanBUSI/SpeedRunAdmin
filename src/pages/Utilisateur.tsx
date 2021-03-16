@@ -1,48 +1,50 @@
-import React, { useState } from 'react';
-import  { BrowserRouter,Link} from 'react-router-dom'
+import React from 'react';
 import {Navbar, Nav,NavDropdown, Form, FormControl, Button, Card, Pagination } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { Pie, Bar, HorizontalBar,Line,Polar, } from 'react-chartjs-2';
 import history from '../history'
 import img from '.../../../public/profil.jpg'
 
 const publicite = () => {
-    return history.replace('/pub')
+    return history.push('/pub')
 }
 
 const home = () => {
-    return history.replace('/home')
+    return history.push('/home')
 }
 
 const user = () => {
-    return history.replace('/utilisateur')
+    return history.push('/utilisateur')
 }
 
 const coach = () => {
-    return history.replace('/coach')
+    return history.push('/coach')
 }
 
 const admin = () => {
-    return history.replace('/admin')
+    return history.push('/admin')
 }
 
 const profil = () => {
-    return history.replace('/profil')
+    return history.push('/profil')
 }
 
 const login = () => {
-    return history.replace('/')
+    return history.push('/')
 }
 
 const api = () => {
-    return history.replace('/api')
+    return history.push('/api')
+}
+
+const getUser = () => {
+    return history.push('/user')
 }
 
 const Home = () =>  {
 
     return (
         <>
-         <Navbar className="nav-postition" collapseOnSelect expand="lg" variant="dark">
+        <Navbar className="nav-postition" collapseOnSelect expand="lg" variant="dark">
             <Navbar.Brand href="#home" style={{color: "#F8AE6B"}} onClick={home}>SpeedRun</Navbar.Brand>
             <Navbar.Toggle aria-controls="responsive-navbar-nav"/>
             <Navbar.Collapse id="responsive-navbar-nav">
@@ -106,182 +108,7 @@ const Home = () =>  {
                                     <p className="text-left col-md-6 col-xs-12">Taille : <span style={{fontWeight: "bold"}}> 1 m 73  </span></p>
                                 </div>
                                 <div className="col-md-12 col-xs-12 d-none d-sm-block d-sm-none d-md-block">
-                                    <Button className="col-md-12 text-center text-right color-speedrun-success">Voir le profil</Button>
-                                </div>
-                            </Card.Body>
-                        </Card>
-                        <Card className="col-md-3 col-xs-12 card-border">
-                            <Card.Body className="card-border card-effet">
-                                <div className="row">
-                                    <Card.Img variant="top" src={img} height={100} className="col-4 text-center img-change"/>
-                                    <div className="col-md-8">
-                                        <p className="text-left col-md-12 col-xs-12">Nom : <span style={{fontWeight: "bold"}}>Sylvestre</span></p>
-                                        <p className="text-left col-md-12 col-xs-12">Prenom : <span style={{fontWeight: "bold"}}>Mike</span></p>
-                                    </div>
-                                </div>
-                                <hr/>
-                                    <p className="text-center col-md-12 col-xs-12">Email : <span style={{fontWeight: "bold"}}>mike.sylvestre@imie-paris.fr </span></p>
-                                <hr/>
-                                <div className="row ">
-                                    <p className="text-left col-md-5 col-xs-12">Prenium : <span style={{fontWeight: "bold"}}> Oui  </span></p>
-                                    <p className="text-left col-md-12 col-xs-12">Date d'inscritpion : <span style={{fontWeight: "bold"}}> {new Date().getDate()+"/"+(new Date().getMonth()+1)+"/"+new Date().getFullYear()} </span></p>
-                                </div>
-                                <div className="row ">
-                                    <p className="text-left col-md-6 col-xs-12">Poids : <span style={{fontWeight: "bold"}}>85 Kg </span></p>
-                                    <p className="text-left col-md-6 col-xs-12">Taille : <span style={{fontWeight: "bold"}}> 1 m 73  </span></p>
-                                </div>
-                                <div className="col-md-12 col-xs-12 d-none d-sm-block d-sm-none d-md-block">
-                                    <Button className="col-md-12 text-center text-right color-speedrun-success">Voir le profil</Button>
-                                </div>
-                            </Card.Body>
-                        </Card>
-                        <Card className="col-md-3 col-xs-12 card-border">
-                            <Card.Body className="card-border card-effet">
-                                <div className="row">
-                                    <Card.Img variant="top" src={img} height={100} className="col-4 text-center img-change"/>
-                                    <div className="col-md-8">
-                                        <p className="text-left col-md-12 col-xs-12">Nom : <span style={{fontWeight: "bold"}}>Sylvestre</span></p>
-                                        <p className="text-left col-md-12 col-xs-12">Prenom : <span style={{fontWeight: "bold"}}>Mike</span></p>
-                                    </div>
-                                </div>
-                                <hr/>
-                                    <p className="text-center col-md-12 col-xs-12">Email : <span style={{fontWeight: "bold"}}>mike.sylvestre@imie-paris.fr </span></p>
-                                <hr/>
-                                <div className="row ">
-                                    <p className="text-left col-md-5 col-xs-12">Prenium : <span style={{fontWeight: "bold"}}> Oui  </span></p>
-                                    <p className="text-left col-md-12 col-xs-12">Date d'inscritpion : <span style={{fontWeight: "bold"}}> {new Date().getDate()+"/"+(new Date().getMonth()+1)+"/"+new Date().getFullYear()} </span></p>
-                                </div>
-                                <div className="row ">
-                                    <p className="text-left col-md-6 col-xs-12">Poids : <span style={{fontWeight: "bold"}}>85 Kg </span></p>
-                                    <p className="text-left col-md-6 col-xs-12">Taille : <span style={{fontWeight: "bold"}}> 1 m 73  </span></p>
-                                </div>
-                                <div className="col-md-12 col-xs-12 d-none d-sm-block d-sm-none d-md-block">
-                                    <Button className="col-md-12 text-center text-right color-speedrun-success">Voir le profil</Button>
-                                </div>
-                            </Card.Body>
-                        </Card>
-                        <Card className="col-md-3 col-xs-12 card-border">
-                            <Card.Body className="card-border card-effet">
-                                <div className="row">
-                                    <Card.Img variant="top" src={img} height={100} className="col-4 text-center img-change"/>
-                                    <div className="col-md-8">
-                                        <p className="text-left col-md-12 col-xs-12">Nom : <span style={{fontWeight: "bold"}}>Sylvestre</span></p>
-                                        <p className="text-left col-md-12 col-xs-12">Prenom : <span style={{fontWeight: "bold"}}>Mike</span></p>
-                                    </div>
-                                </div>
-                                <hr/>
-                                    <p className="text-center col-md-12 col-xs-12">Email : <span style={{fontWeight: "bold"}}>mike.sylvestre@imie-paris.fr </span></p>
-                                <hr/>
-                                <div className="row ">
-                                    <p className="text-left col-md-5 col-xs-12">Prenium : <span style={{fontWeight: "bold"}}> Oui  </span></p>
-                                    <p className="text-left col-md-12 col-xs-12">Date d'inscritpion : <span style={{fontWeight: "bold"}}> {new Date().getDate()+"/"+(new Date().getMonth()+1)+"/"+new Date().getFullYear()} </span></p>
-                                </div>
-                                <div className="row ">
-                                    <p className="text-left col-md-6 col-xs-12">Poids : <span style={{fontWeight: "bold"}}>85 Kg </span></p>
-                                    <p className="text-left col-md-6 col-xs-12">Taille : <span style={{fontWeight: "bold"}}> 1 m 73  </span></p>
-                                </div>
-                                <div className="col-md-12 col-xs-12 d-none d-sm-block d-sm-none d-md-block">
-                                    <Button className="col-md-12 text-center text-right color-speedrun-success">Voir le profil</Button>
-                                </div>
-                            </Card.Body>
-                        </Card>
-                        <Card className="col-md-3 col-xs-12 card-border">
-                            <Card.Body className="card-border card-effet">
-                                <div className="row">
-                                    <Card.Img variant="top" src={img} height={100} className="col-4 text-center img-change"/>
-                                    <div className="col-md-8">
-                                        <p className="text-left col-md-12 col-xs-12">Nom : <span style={{fontWeight: "bold"}}>Sylvestre</span></p>
-                                        <p className="text-left col-md-12 col-xs-12">Prenom : <span style={{fontWeight: "bold"}}>Mike</span></p>
-                                    </div>
-                                </div>
-                                <hr/>
-                                    <p className="text-center col-md-12 col-xs-12">Email : <span style={{fontWeight: "bold"}}>mike.sylvestre@imie-paris.fr </span></p>
-                                <hr/>
-                                <div className="row ">
-                                    <p className="text-left col-md-5 col-xs-12">Prenium : <span style={{fontWeight: "bold"}}> Oui  </span></p>
-                                    <p className="text-left col-md-12 col-xs-12">Date d'inscritpion : <span style={{fontWeight: "bold"}}> {new Date().getDate()+"/"+(new Date().getMonth()+1)+"/"+new Date().getFullYear()} </span></p>
-                                </div>
-                                <div className="row ">
-                                    <p className="text-left col-md-6 col-xs-12">Poids : <span style={{fontWeight: "bold"}}>85 Kg </span></p>
-                                    <p className="text-left col-md-6 col-xs-12">Taille : <span style={{fontWeight: "bold"}}> 1 m 73  </span></p>
-                                </div>
-                                <div className="col-md-12 col-xs-12 d-none d-sm-block d-sm-none d-md-block">
-                                    <Button className="col-md-12 text-center text-right color-speedrun-success">Voir le profil</Button>
-                                </div>
-                            </Card.Body>
-                        </Card>
-                        <Card className="col-md-3 col-xs-12 card-border">
-                            <Card.Body className="card-border card-effet">
-                                <div className="row">
-                                    <Card.Img variant="top" src={img} height={100} className="col-4 text-center img-change"/>
-                                    <div className="col-md-8">
-                                        <p className="text-left col-md-12 col-xs-12">Nom : <span style={{fontWeight: "bold"}}>Sylvestre</span></p>
-                                        <p className="text-left col-md-12 col-xs-12">Prenom : <span style={{fontWeight: "bold"}}>Mike</span></p>
-                                    </div>
-                                </div>
-                                <hr/>
-                                    <p className="text-center col-md-12 col-xs-12">Email : <span style={{fontWeight: "bold"}}>mike.sylvestre@imie-paris.fr </span></p>
-                                <hr/>
-                                <div className="row ">
-                                    <p className="text-left col-md-5 col-xs-12">Prenium : <span style={{fontWeight: "bold"}}> Oui  </span></p>
-                                    <p className="text-left col-md-12 col-xs-12">Date d'inscritpion : <span style={{fontWeight: "bold"}}> {new Date().getDate()+"/"+(new Date().getMonth()+1)+"/"+new Date().getFullYear()} </span></p>
-                                </div>
-                                <div className="row ">
-                                    <p className="text-left col-md-6 col-xs-12">Poids : <span style={{fontWeight: "bold"}}>85 Kg </span></p>
-                                    <p className="text-left col-md-6 col-xs-12">Taille : <span style={{fontWeight: "bold"}}> 1 m 73  </span></p>
-                                </div>
-                                <div className="col-md-12 col-xs-12 d-none d-sm-block d-sm-none d-md-block">
-                                    <Button className="col-md-12 text-center text-right color-speedrun-success">Voir le profil</Button>
-                                </div>
-                            </Card.Body>
-                        </Card>
-                        <Card className="col-md-3 col-xs-12 card-border">
-                            <Card.Body className="card-border card-effet">
-                                <div className="row">
-                                    <Card.Img variant="top" src={img} height={100} className="col-4 text-center img-change"/>
-                                    <div className="col-md-8">
-                                        <p className="text-left col-md-12 col-xs-12">Nom : <span style={{fontWeight: "bold"}}>Sylvestre</span></p>
-                                        <p className="text-left col-md-12 col-xs-12">Prenom : <span style={{fontWeight: "bold"}}>Mike</span></p>
-                                    </div>
-                                </div>
-                                <hr/>
-                                    <p className="text-center col-md-12 col-xs-12">Email : <span style={{fontWeight: "bold"}}>mike.sylvestre@imie-paris.fr </span></p>
-                                <hr/>
-                                <div className="row ">
-                                    <p className="text-left col-md-5 col-xs-12">Prenium : <span style={{fontWeight: "bold"}}> Oui  </span></p>
-                                    <p className="text-left col-md-12 col-xs-12">Date d'inscritpion : <span style={{fontWeight: "bold"}}> {new Date().getDate()+"/"+(new Date().getMonth()+1)+"/"+new Date().getFullYear()} </span></p>
-                                </div>
-                                <div className="row ">
-                                    <p className="text-left col-md-6 col-xs-12">Poids : <span style={{fontWeight: "bold"}}>85 Kg </span></p>
-                                    <p className="text-left col-md-6 col-xs-12">Taille : <span style={{fontWeight: "bold"}}> 1 m 73  </span></p>
-                                </div>
-                                <div className="col-md-12 col-xs-12 d-none d-sm-block d-sm-none d-md-block">
-                                    <Button className="col-md-12 text-center text-right color-speedrun-success">Voir le profil</Button>
-                                </div>
-                            </Card.Body>
-                        </Card>
-                        <Card className="col-md-3 col-xs-12 card-border">
-                            <Card.Body className="card-border card-effet">
-                                <div className="row">
-                                    <Card.Img variant="top" src={img} height={100} className="col-4 text-center img-change"/>
-                                    <div className="col-md-8">
-                                        <p className="text-left col-md-12 col-xs-12">Nom : <span style={{fontWeight: "bold"}}>Sylvestre</span></p>
-                                        <p className="text-left col-md-12 col-xs-12">Prenom : <span style={{fontWeight: "bold"}}>Mike</span></p>
-                                    </div>
-                                </div>
-                                <hr/>
-                                    <p className="text-center col-md-12 col-xs-12">Email : <span style={{fontWeight: "bold"}}>mike.sylvestre@imie-paris.fr </span></p>
-                                <hr/>
-                                <div className="row ">
-                                    <p className="text-left col-md-5 col-xs-12">Prenium : <span style={{fontWeight: "bold"}}> Oui  </span></p>
-                                    <p className="text-left col-md-12 col-xs-12">Date d'inscritpion : <span style={{fontWeight: "bold"}}> {new Date().getDate()+"/"+(new Date().getMonth()+1)+"/"+new Date().getFullYear()} </span></p>
-                                </div>
-                                <div className="row ">
-                                    <p className="text-left col-md-6 col-xs-12">Poids : <span style={{fontWeight: "bold"}}>85 Kg </span></p>
-                                    <p className="text-left col-md-6 col-xs-12">Taille : <span style={{fontWeight: "bold"}}> 1 m 73  </span></p>
-                                </div>
-                                <div className="col-md-12 col-xs-12 d-none d-sm-block d-sm-none d-md-block">
-                                    <Button className="col-md-12 text-center text-right color-speedrun-success">Voir le profil</Button>
+                                    <Button onClick={getUser} className="col-md-12 text-center text-right color-speedrun-success">Voir le profil</Button>
                                 </div>
                             </Card.Body>
                         </Card>

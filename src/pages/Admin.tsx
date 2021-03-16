@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import {Navbar, Nav,NavDropdown, Form, FormControl, Button, Card, Modal } from 'react-bootstrap';
+import {Navbar, Nav,NavDropdown, Form, FormControl, Button, Card } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { HorizontalBar, } from 'react-chartjs-2';
+import { HorizontalBar } from 'react-chartjs-2';
 import history from '../history'
 import img from '.../../../public/profil.jpg'
 
@@ -40,12 +40,6 @@ const api = () => {
 
 const Home = () =>  {
 
-    const [show, setShow] = useState(false);
-
-    const handleClose = () => setShow(false);
-    const handleShow = () => setShow(true);
-
-
     const polar = {
         labels: ['','Création profil', 'Coach créé', 'Publicités lancer',''],
         datasets: [
@@ -81,7 +75,7 @@ const Home = () =>  {
     return (
         <>
          <Navbar className="nav-postition" collapseOnSelect expand="lg" variant="dark">
-            <Navbar.Brand href="#home" style={{color: "#F8AE6B"}} onClick={home}>SpeedRun</Navbar.Brand>
+            <Navbar.Brand style={{color: "#F8AE6B"}} onClick={home}>SpeedRun</Navbar.Brand>
             <Navbar.Toggle aria-controls="responsive-navbar-nav"/>
             <Navbar.Collapse id="responsive-navbar-nav">
                 <Nav className="mr-auto col-md-8">
@@ -149,9 +143,6 @@ const Home = () =>  {
                             <div style={{marginTop:"2%"}} className="col-md-12 col-xs-12 d-none d-sm-block d-sm-none d-md-block">
                                 <Button className="col-md-12 text-center text-right color-speedrun-success">Valider les modifications</Button>
                             </div>
-                            <div style={{marginTop:"2%"}} className="col-md-12 col-xs-12 d-none d-sm-block d-sm-none d-md-block">
-                                <Button className="col-md-12 text-center text-right color-speedrun-success" onClick={handleShow}>Payer le Coach</Button>
-                            </div>
                         </div>
                     </Card.Body>
                 </Card>
@@ -163,22 +154,6 @@ const Home = () =>  {
                 </Card>
             </div>
         </div>
-        <Modal style={{backgroundColor: "rgba(48,45,68,0.5)"}} show={show} onHide={handleClose}>
-            <Modal.Header closeButton style={{backgroundColor: "#302d42", color: "#F8AE6B"}}>
-            <Modal.Title>Attention Paiement</Modal.Title>
-            </Modal.Header>
-            <Modal.Body style={{backgroundColor: "#302d42"}}>
-                Êtes-vous certains de vouloir payer le montant de 10 € au coach Sylvestre
-            </Modal.Body>
-            <Modal.Footer style={{backgroundColor: "#302d42", color: "#F8AE6B"}}>
-            <Button className="btn btn-danger" onClick={handleClose}>
-                Fermer
-            </Button>
-            <Button className="color-speedrun-success" onClick={handleClose}>
-                Envoyer le paiement
-            </Button>
-            </Modal.Footer>
-        </Modal>
     </>
     )
 }
