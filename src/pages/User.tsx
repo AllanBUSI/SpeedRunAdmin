@@ -60,7 +60,7 @@ const Home = () =>  {
         ]
     };
 
-    const selectedFile = useState()
+    const selectedFile = ""
     const [preview, setPreview] = useState()
 
     useEffect(() => {
