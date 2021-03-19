@@ -61,7 +61,7 @@ const Home = () =>  {
         ]
     };
 
-    const selectedFile = useState()
+    const selectedFile = ""
     const [preview, setPreview] = useState()
 
     // create a preview as a side effect, whenever selected file is changed
